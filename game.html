@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>俄罗斯方块</title>
+        <script src="jquery-1.11.3.min.js"></script>
+        <link rel="stylesheet" href="index.css">
+	</head>
+	<body>
+        <div class="start-container">
+            <p><button id="btn-start">俄罗斯方块</button></p>
+            <p><button id="other">贪吃蛇</button></p>
+             <p><button id="double">双人模式</button></p>
+           <p><button id="btn-setting">设置</button></p>
+            
+        </div>
+         <div class="end-container">
+                <h2>弱爆了，哈哈哈哈<p class="final_score"></p></h2>
+                <input type="button" id="restart"  value="再来一局" />
+             
+        </div>
+ 
+   <div class="modal-dialog">
+        <div class="modal-body">
+          
+            <h3>声音选项</h3>
+            <label for="sound-on">  启动声音</label>
+             <input type="checkbox" id="sound-on">
+             <label for="sound-off"> 关闭声音 </label>
+            <input type="checkbox" id="sound-off">
+            <br>
+             <h3>音乐类型</h3>
+             <label for="music1">  专业的</label>
+             <input type="checkbox" id="music1">
+             <label for="music2">忧郁的 </label>
+            <input type="checkbox" id="music2">
+             <label for="music3">性感的 </label>
+            <input type="checkbox" id="music3">
+            <br>
+             <h3>界面选项</h3>
+             <label for="small">小型画布</label>
+           <input type="checkbox" id="small">
+           <label for="middle">中型画布</label>
+           <input type="checkbox" id="middle">
+            <label for="big">大型画布</label>
+           <input type="checkbox" id="big">
+            <br>
+             <h3>难度选项</h3>
+            <label for="level1"> 低难度</label>
+           <input type="checkbox" id="level1">
+             <label for="level2"> 中等难度</label>
+           <input type="checkbox" id="level2">
+             <label for="level3">  高难度</label>
+            <input type="checkbox" id="level3">
+            <br>
+             <h3>皮肤选项</h3>
+              <label for="happy"> 逗比型</label>
+           <input type="checkbox" id="happy">
+             <label for="strict">  严肃型</label>
+           <input type="checkbox" id="strict">
+            <label for="soso">  无所谓型</label>
+           <input type="checkbox" id="soso">
+            <br>
+              <br>
+                <br>
+            <button id="btn-dialog-close">关闭</button>
+
+        </div>
+    </div>
+        <div class="game-container">
+            
+             <div class="help-panel">
+                 <div class="panel-header">
+                        游戏说明
+                  </div>
+                  <div class="panel-body">
+                      <p>俄罗斯方块模式时：</p>
+                      <p> ↑翻转方块</p>
+                      <p>↓加速下落</p>
+                       <p>→向右移动</p>
+                      <p>←向左移动</p>
+                      <p>贪吃蛇模式模式时：</p>
+                      <p>W向上移动</p>
+                      <p>S向下移动</p>
+                       <p>D向右移动</p>
+                      <p>A向做移动</p>
+                       <p>双人模式时：</p>
+                      <p>不能碰壁</p>
+                      <p>不能碰到方块</p>
+                  </div>
+             </div>
+  
+             <div class="game-main-panel">
+                 <canvas  id="c_canvas_main"  ></canvas>
+                 <canvas  id="_canvas"  ></canvas>
+             </div>
+             <div class="next-panel">
+                 <div class="panel-header">
+                     方块速度（格/ms）
+                  </div>
+                  <div class="panel-body">
+                        <canvas id="block_speed"></canvas>
+                  </div>
+                   <div class="panel-header">
+                      贪吃蛇速度（格/ms）
+                  </div>
+                   <div class="panel-body">
+                    <canvas id="snack_speed"></canvas>
+                </div>
+            
+              
+             </div>
+            <div class="setting-panel">
+                 <div class="panel-header">
+                      游戏控制
+                  </div>
+                  <div class="panel-body">
+                      <br>
+                    <input type="button" id="btn_pause"  value="暂停" />
+                      <br>
+                      
+                    <input type="button" id="btn_restart"  value="重新开始" /> 
+                         <br>
+                    <input type="button" id="btn_set"  value="设置" />
+                      <br>
+                  </div>
+             </div>
+             <div class="score-panel">
+                 <div class="panel-header">
+                     当前得分
+                  </div>
+                  <div class="panel-body">
+                  <canvas id="score"></canvas>
+                  </div>
+             </div>
+             <div class="timer-panel">
+                 <div class="panel-header">
+                      使用时间
+                  </div>
+                  <div class="panel-body" >
+                       <canvas id="time"></canvas>
+                  </div>
+             </div>
+        </div>
+         <script src="canvas.js"></script>
+         <script src="blocks.js"></script>
+        <script src="shap.js"></script>
+         <script src="Time.js"></script>
+        <script src="resource.js"></script>
+
+         <script src="scores.js"></script>
+        <script src="sound.js"></script>
+        <script src="Board.js"></script>
+        <script src="keyBoard.js"></script>
+        <script src="howler.min.js"></script>
+        <script src="act.js"></script>
+         <script src="speed.js"></script>
+          <script src="speed2.js"></script>
+        <script src="app.js"></script>
+
+   </body>
+</html>
